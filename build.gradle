@@ -34,9 +34,17 @@ compileTestKotlin {
 }
 
 dependencies {
-    compile "ch.qos.logback:logback-classic:1.2.3"
     compile "io.ktor:ktor-server-netty:$ktor_version"
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+
+//    compile "ch.qos.logback:logback-classic:1.2.3"
+    compile 'com.lmax:disruptor:3.3.5' // Required by Log4J to be Async
+    compile "org.apache.logging.log4j:log4j-1.2-api:$log4j2_version"
+    compile "org.apache.logging.log4j:log4j-core:$log4j2_version"
+    compile "org.apache.logging.log4j:log4j-slf4j-impl:$log4j2_version"
+    compile "org.apache.logging.log4j:log4j-jcl:$log4j2_version"
+    compile "org.apache.logging.log4j:log4j-jul:$log4j2_version"
+
     testCompile "junit:junit:4.12"
 }
 

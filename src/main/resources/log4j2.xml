@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration name="spid-braze-sync" status="WARN">
+  <Appenders>
+    <Console name="console" target="SYSTEM_OUT">
+      <JsonLayout compact="true" complete="false" eventEol="true" includeStacktrace="true"
+        properties="true" stacktraceAsString="true">
+        <KeyValuePair key="service" value="${env:APP:-unknown}"/>
+        <KeyValuePair key="release" value="${env:RELEASE:-unknown}"/>
+      </JsonLayout>
+    </Console>
+  </Appenders>
+  <Loggers>
+    <asyncRoot level="info">
+      <AppenderRef ref="console"/>
+    </asyncRoot>
+  </Loggers>
+</Configuration>
