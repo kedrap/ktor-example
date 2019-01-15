@@ -1,9 +1,11 @@
 group 'Example'
 version '1.0-SNAPSHOT'
 
+apply plugin: 'application'
 apply plugin: 'java'
 apply plugin: 'kotlin'
 
+mainClassName = 'blog.BlogAppKt'
 sourceCompatibility = 1.8
 
 buildscript {
@@ -25,6 +27,7 @@ compileTestKotlin {
 }
 
 dependencies {
+    compile "ch.qos.logback:logback-classic:1.2.3"
     compile "io.ktor:ktor-server-netty:$ktor_version"
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     testCompile "junit:junit:4.12"
