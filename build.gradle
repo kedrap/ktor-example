@@ -33,3 +33,9 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
+
+kotlin {
+    experimental {
+        coroutines "enable"
+    }
+}
