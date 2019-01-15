@@ -1,7 +1,24 @@
-/.gradle
-/.idea
-/out
-/build
+.idea
+.gradle
+.vertx
+**/build/
+*.jar
+!gradle-wrapper.jar
+**/out/
 *.iml
 *.ipr
 *.iws
+.DS_Store
+*.log
+
+# temp dir
+tmp/
+
+# dotenv environment variables file
+.env
+.env*
+!.env.template
+!.env.docker
+
+# Git
+.shelf
