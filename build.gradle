@@ -5,7 +5,7 @@ apply plugin: 'application'
 apply plugin: 'java'
 apply plugin: 'kotlin'
 
-mainClassName = 'blog.BlogAppKt'
+mainClassName = 'io.ktor.server.netty.EngineMain'
 sourceCompatibility = 1.8
 
 buildscript {
